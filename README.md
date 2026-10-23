@@ -3,7 +3,7 @@
 A single-file, **offline** paper-wallet generator for [ZKas](https://gitlab.com/zkas-group/zkas-rusty)
 — the shielded-by-default (Orchard / Halo 2) rusty-kaspa fork.
 
-**Live:** https://firecash.github.io/zkas-paper-wallet/
+**Live:** https://zkas.info/paper-wallet/ (GitLab Pages: https://zkas-group.gitlab.io/zkas-paper-wallet/ once enabled)
 
 It generates a shielded (`zkas:`) address and its 32-byte recovery seed **entirely in
 your browser**, in WebAssembly ([`zkas-signer`](https://gitlab.com/zkas-group/zkas-signer)).
