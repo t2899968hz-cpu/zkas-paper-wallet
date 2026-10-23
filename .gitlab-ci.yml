@@ -1,0 +1,14 @@
+# Serve the paper wallet from GitLab Pages straight out of this repository,
+# so the hosted page is byte-for-byte the audited source.
+pages:
+  stage: deploy
+  image: alpine:3.20
+  script:
+    - mkdir -p public
+    - cp index.html public/
+    - cd public && sha256sum index.html
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
