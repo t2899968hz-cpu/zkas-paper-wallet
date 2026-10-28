@@ -1,12 +1,12 @@
 # ZKas Paper Wallet
 
-A single-file, **offline** paper-wallet generator for [ZKas](https://gitlab.com/zkas-group/zkas-rusty)
+A single-file, **offline** paper-wallet generator for [ZKas](https://zkas.info/code/rusty)
 — the shielded-by-default (Orchard / Halo 2) rusty-kaspa fork.
 
 **Live:** https://zkas.info/paper-wallet/ (GitLab Pages: https://zkas-group.gitlab.io/zkas-paper-wallet/ once enabled)
 
 It generates a shielded (`zkas:`) address and its 32-byte recovery seed **entirely in
-your browser**, in WebAssembly ([`zkas-signer`](https://gitlab.com/zkas-group/zkas-signer)).
+your browser**, in WebAssembly ([`zkas-signer`](https://zkas.info/code/signer)).
 Keys never leave the page and it makes **zero network requests**.
 
 The recovery seed — both the hex string and its QR code — stays blurred until you press
@@ -30,7 +30,7 @@ web/mobile wallet).
 ## Verify it's offline
 
 Open your browser's Network tab and reload: the page must issue **no requests** after load.
-The wallet logic is the [`zkas-signer`](https://gitlab.com/zkas-group/zkas-signer) crate
+The wallet logic is the [`zkas-signer`](https://zkas.info/code/signer) crate
 compiled to WebAssembly and inlined as base64 — there is nothing external to fetch.
 
 To confirm this page was built from that source, rebuild the wasm and compare its hash
@@ -41,7 +41,7 @@ sha256 = ea0ec55a2cef0bb7f3cd6ce80b0e5c218693e0e97be49c80a73587b1eefcd409
 size   = 594044 bytes
 ```
 
-Built from [`zkas-signer`](https://gitlab.com/zkas-group/zkas-signer) commit `fa1b6e8`
+Built from [`zkas-signer`](https://zkas.info/code/signer) commit `fa1b6e8`
 (adds the watch-only View key generator). Earlier revisions of this page embedded:
 
 | page revision | sha256 | size |
